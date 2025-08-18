@@ -20,7 +20,3 @@ It simulates how employees in a company could query policies, workflows, or engi
 - **Vector DB**: [FAISS](https://github.com/facebookresearch/faiss) (local, lightweight)  
 - **LLM**: [Ollama](https://ollama.ai/) (Mistral or Llama3 recommended)  
 - **Docs Source**: Mock Confluence data (can be swapped with real Confluence API)  
-
----
-
-## 📂 Project Structure
