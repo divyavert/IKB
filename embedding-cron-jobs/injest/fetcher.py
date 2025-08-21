@@ -19,5 +19,6 @@ def fetch_confluence_pages():
 
     transformed_response = response.get("results", [])
 
+
     return transformed_response
           
