@@ -1,0 +1,91 @@
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+/* Markdown styling for chat messages */
+.MuiCardContent-root a {
+  color: #5465FF;
+  text-decoration: none;
+}
+
+.MuiCardContent-root a:hover {
+  text-decoration: underline;
+}
+
+.MuiCardContent-root pre {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 12px;
+  overflow-x: auto;
+  margin: 8px 0;
+}
+
+.MuiCardContent-root code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.MuiCardContent-root pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.MuiCardContent-root ul, 
+.MuiCardContent-root ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+/* Animation for the typing indicator */
+@keyframes blink {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.thinking-dots {
+  animation: blink 1.5s infinite;
+}
+
+/* Smooth transition for theme switching */
+body {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
