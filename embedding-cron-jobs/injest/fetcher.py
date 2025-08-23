@@ -7,7 +7,7 @@ from requests.auth import HTTPBasicAuth
 
 def fetch_confluence_pages():
 
-    url = "https://advantalabs.atlassian.net/wiki/rest/api/content?type=page&expand=body.storage"
+    url = "https://advantalabs.atlassian.net/wiki/rest/api/content?type=page&expand=body.storage,version"
 
     confluence_user = os.getenv("CONFLUENCE_USER")
     confluence_token = os.getenv("CONFLUENCE_TOKEN")

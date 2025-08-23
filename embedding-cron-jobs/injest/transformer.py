@@ -221,7 +221,6 @@ def transform_fetched_pages(fetched_pages):
             title = chunk['title'] or "Untitled Section"
             if page['title']:
                 title = f"{title} ({page['title']})"
-            
             transformed_chunks.append({
                 "id": chunk_id,
                 "title": title,
@@ -229,5 +228,6 @@ def transform_fetched_pages(fetched_pages):
                 "pageId": page["id"],
                 "pageTitle": page["title"],
                 "chunkIndex": i,
+                "updated_at": page.get("version", {}).get("when", "")
             })
     return transformed_chunks

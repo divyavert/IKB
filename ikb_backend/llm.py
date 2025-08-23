@@ -6,10 +6,14 @@ import re
 
 
 def fetch_llm_response(prompt):
-    system_Prompt = """YYou are given a user prompt and a context retrieved from a vector database. 
+    system_Prompt = """You are given a user prompt and a context retrieved from a vector database. 
 The context may be incomplete, slightly inaccurate, or partially irrelevant. 
 Your task is to generate the most relevant and accurate response using the context as supporting information. 
 If the context is not useful, rely on your general knowledge.
+
+If the query is outside scope (e.g., celebrities, personal details, politics, religion, sensitive/unsafe content, or unrelated to the allowed domain), respond ONLY with:
+{ "answer": "I'm sorry, I can't assist with that.", "context_used": "None", "confidence": "High", "notes": "Query outside allowed scope" }
+
 
 Respond ONLY in strict JSON with this exact structure:
 
@@ -21,7 +25,7 @@ Respond ONLY in strict JSON with this exact structure:
 }
 
 Rules:
-- "answer": Must be a big, direct and related to question. 
+- "answer": Must be markdown formatted with each line well spaced, big, direct, and related to the question.
   ❌ no introductions, no summaries.  
   ✅ Example: "tech stack used are React.js, Redux Toolkit, Styled Components"  
 - "context_used": State the context title/identifier used, or "None" if irrelevant.  
