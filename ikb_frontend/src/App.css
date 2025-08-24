@@ -20,6 +20,17 @@ body {
 }
 
 /* Markdown styling for chat messages */
+.MuiCardContent-root {
+  width: 100%;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.MuiCardContent-root p {
+  margin: 0.5em 0;
+}
+
 .MuiCardContent-root a {
   color: #5465FF;
   text-decoration: none;
@@ -35,6 +46,7 @@ body {
   padding: 12px;
   overflow-x: auto;
   margin: 8px 0;
+  max-width: 100%;
 }
 
 .MuiCardContent-root code {
@@ -53,6 +65,11 @@ body {
 .MuiCardContent-root ol {
   padding-left: 20px;
   margin: 8px 0;
+}
+
+/* Ensure all content stays within message bounds */
+.MuiCardContent-root * {
+  max-width: 100%;
 }
 
 /* Animation for the typing indicator */
