@@ -2,6 +2,8 @@
 
 IKB is a modern **Retrieval-Augmented Generation (RAG)** system designed for answering internal company questions and accessing organizational knowledge efficiently. It provides natural language interactions with your company's documentation, allowing employees to quickly find answers to questions like _"How do I deploy the frontend in our staging environment?"_ or _"What's the process for requesting PTO?"_
 
+
+
 ## 🚀 Project Overview
 
 - **Purpose**: A chatbot interface for querying internal company knowledge
@@ -107,6 +109,38 @@ The system can be configured to use different LLMs, embeddings, and data sources
 - **Vector DB**: ChromaDB settings in `db.py`
 - **Data Sources**: Configure document sources in `injest/fetcher.py`
 
+## 📂 Project Structure
+
+```
+IKB/
+├── assets/                         # Screenshots and demo videos
+│   ├── Chatting_With_Your_Docs.mp4
+│   └── Screenshot*.png
+├── chroma_db/                      # Persistent vector database
+├── embedding-cron-jobs/            # Document processing pipeline
+│   ├── injest/
+│   │   ├── __init__.py
+│   │   ├── embedder.py             # Document embedding logic
+│   │   ├── fetcher.py              # Document source connectors
+│   │   ├── pipeline.py             # Main ingestion pipeline
+│   │   ├── query.py                # Query testing utilities
+│   │   └── transformer.py          # Document chunking logic
+│   └── requirements.txt
+├── ikb_backend/                    # FastAPI server
+│   ├── __init__.py
+│   ├── db.py                       # ChromaDB integration
+│   ├── llm.py                      # Ollama/LLM integration
+│   └── server.py                   # API endpoints
+└── ikb_frontend/                   # React frontend
+    ├── public/
+    ├── src/
+    │   ├── App.scss                # SCSS styling
+    │   ├── App.tsx                 # Main React component
+    │   └── ...
+    ├── package.json
+    └── ...
+```
+
 ## 🧪 Key Components
 
 ### Semantic Chunking
@@ -140,3 +174,19 @@ The modern UI is built with Material UI 7, featuring:
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 📸 Demo & Screenshots
+
+### Video Demo
+
+A video demonstration of the IKB system is available in the assets folder:
+
+- [Chatting With Your Docs.mp4](./assets/Chatting_With_Your_Docs.mp4)
+
+### Few mind maps 
+
+![IKB Chat Interface - Example Response](./assets/Screenshot%202025-08-24%20at%203.04.15%20PM.png)
+
+![IKB Chat Interface - Light Mode](./assets/Screenshot%202025-08-24%20at%203.03.07%20PM.png)
+
+![IKB Chat Interface - Dark Mode](./assets/Screenshot%202025-08-24%20at%203.03.40%20PM.png)
