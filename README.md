@@ -182,11 +182,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 A video demonstration of the IKB system is available in the assets folder:
 
 - [Chatting With Your Docs.mp4](./assets/Chatting_With_Your_Docs.mp4)
-
-### Few mind maps 
-
-![IKB Chat Interface - Example Response](./assets/Screenshot%202025-08-24%20at%203.04.15%20PM.png)
-
-![IKB Chat Interface - Light Mode](./assets/Screenshot%202025-08-24%20at%203.03.07%20PM.png)
-
-![IKB Chat Interface - Dark Mode](./assets/Screenshot%202025-08-24%20at%203.03.40%20PM.png)
